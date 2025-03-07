@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<head>
+    <title>Shoppistan.pk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ecommerce.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6dd7422b42.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+<!--------------------------------------------------Header----------------------------------------->
+    <header class="main-header"> <!--contains logo , navbar , cart amd login toggle menus-->
+       <nav class="nav-bar">
+        <div class="logo"><a href="home.html">
+            <img class="logo-img" src="images/logo.png">
+             <h3>SHOPPISTAN.PK</h3>
+        </a></div>
+        <div>
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-items" ><a href="home.html"> Home </a></li>
+                <li class="nav-items" ><a href="shop.html"> Shop </a></li>
+                <li class="nav-items" ><a href="blog.html"> Blog </a></li>
+                <li class="nav-items" ><a href="FAQ.html"> FAQ's </a></li>
+                <li class="nav-items" ><a href="about.html"> About</a></li>
+                <li class="nav-items" ><a href="contact.html"> Contacts </a></li>
+                <i class="fa-solid fa-x close-menu" id="close-menu" onclick="closeMenu()"></i>
+            </ul>
+         </div>
+
+         <div><!---Toggle menus of login and cart-->
+
+            <i   class="fa-regular fa-user" id="login-toggle" onclick="showLogin()"></i>
+            <i class="fa-solid fa-cart-shopping" id="cart-toggle" onclick="showCart()"></i>
+
+
+         </div>
+         <i class="fa-solid fa-bars menu-icon " id="menu-icon" onclick="openMenu()"></i>
+    </nav>
+
+
+    </header>
+    <!---Cart Section-->
+    
+
+    <section class="cart-toggle-menu">
+        <div class="cart-header">
+            <h3>My cart</h3>
+            <i class="fa-solid fa-xmark"  onclick="closeCart()"></i>
+        </div>
+        <div class="cart-row">
+            <div>
+                <img src="images/cart-1.png">
+            </div>
+            <div class="prod-info">
+                <h4>Wind Breaker</h4>
+                <p class="price"> 12.00$ </p>
+                <span>
+                    
+                    <button class="cart-inc-button" onclick="IncCard()"> + </button><p class="quantity" id="prod-1"> 1 </p><button class="cart-inc-button" onclick="DecCard()"> - </button> 
+                    <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+        </div> <!-- Close cart-row -->
+    
+        <div class="cart-row">
+            <div>
+                <img src="images/cart-2.png">
+            </div>
+            <div class="prod-info">
+                <h4>Cardagian Hoodie</h4>
+                <p class="price"> 16.00$ </p>
+                <span>
+                <button class="cart-inc-button" onclick="IncCard()"> + </button><p class="quantity" id="prod-2"> 1 </p><button class="cart-inc-button" onclick="DecCard()"> - </button> 
+                <i class="fa-solid fa-trash"></i>
+            </span>
+            </div>
+        </div> <!-- Close cart-row -->
+    
+        <div class="cart-row">
+            <div>
+                <img src="images/cart-3.png">
+            </div>
+            <div class="prod-info">
+                <h4>Cartoon</h4>
+                <p class="price"> 10.00$ </p>
+                <span>
+                    <button class="cart-inc-button" onclick="IncCard()"> + </button><p class="quantity" id="prod-3"> 1 </p><button class="cart-inc-button" onclick="DecCard()"> - </button> 
+                    <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+        </div> <!-- Close cart-row -->
+    </section>
+    
+
+<!---Login Toggle menu-->
+<section class="login">
+    <div class="login-header">
+        <h3>Login</h3>
+        <i class="fa-solid fa-xmark"  onclick="closeLogin()"></i>
+    </div>
+    <div class="login-details">
+    <input type="email" placeholder="Enter your email">
+    <input type="password" placeholder="Enter your password">
+    <button onclick="Login()"> Login </button>
+    </div>
+    <p>Don't Have an account? <a href="#"  style="text-decoration: underline; color: red;">Sign Up</a></p>
+</section>
+<!---------------------------------Arrow------------------------------------------>
+<a href="#" class="arrow" id="arrow">
+    <i class='bx bx-up-arrow-alt'></i>
+</a>
+
+
+
+
+
+<!--==========================FAQ's Page===========================================-->
+<h1 class="page-heading">FAQ's Page</h1>
+                <h3 class="page-sub-heading"> Home > <span>FAQ's</span></h3>
+
+
+    <section class="faq-main">
+        <div class="question-row">
+            <div class="question-item">
+               <div class="question-content">
+               <header class="question-header">
+                   <i class='bx bx-plus'></i>
+                   <h3 class="question-title">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                   </h3>
+               </header>
+                <div class="answer">
+                   
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione dolorem suscipit placeat, quos ullam doloribus facere. Porro aspernatur ab ex, dolore consectetur incidunt explicabo, natus recusandae iure exercitationem quaerat.
+                   
+               </div>
+           </div>
+
+            </div>
+            <div class="question-item">
+               <div class="question-content">
+               <header class="question-header">
+                   <i class='bx bx-plus'></i>
+                   <h3 class="question-title">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit.                   </h3>
+               </header>
+                <div class="answer">
+                   
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione dolorem suscipit placeat, quos ullam doloribus facere. Porro aspernatur ab ex, dolore consectetur incidunt explicabo, natus recusandae iure exercitationem quaerat.
+                   
+               </div>
+           </div>
+
+            </div>
+       </div>
+        <div class="question-row">
+            <div class="question-item">
+               <div class="question-content">
+               <header class="question-header">
+                   <i class='bx bx-plus'></i>
+                   <h3 class="question-title">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit.                    </h3>
+               </header>
+                <div class="answer">
+                   
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione dolorem suscipit placeat, quos ullam doloribus facere. Porro aspernatur ab ex, dolore consectetur incidunt explicabo, natus recusandae iure exercitationem quaerat.
+                   
+               </div>
+           </div>
+
+            </div>
+            <div class="question-item">
+               <div class="question-content">
+               <header class="question-header">
+                   <i class='bx bx-plus'></i>
+                   <h3 class="question-title">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit.                   </h3>
+               </header>
+                <div class="answer">
+                   
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione dolorem suscipit placeat, quos ullam doloribus facere. Porro aspernatur ab ex, dolore consectetur incidunt explicabo, natus recusandae iure exercitationem quaerat.
+                   
+               </div>
+           </div>
+
+            </div>
+       </div>
+       <div class="question-row">
+        <div class="question-item">
+           <div class="question-content">
+           <header class="question-header">
+               <i class='bx bx-plus'></i>
+               <h3 class="question-title">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.               </h3>
+           </header>
+            <div class="answer">
+               
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione dolorem suscipit placeat, quos ullam doloribus facere. Porro aspernatur ab ex, dolore consectetur incidunt explicabo, natus recusandae iure exercitationem quaerat.
+               
+           </div>
+       </div>
+
+        </div>
+        <div class="question-item">
+           <div class="question-content">
+           <header class="question-header">
+               <i class='bx bx-plus'></i>
+               <h3 class="question-title">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit.               </h3>
+           </header>
+            <div class="answer">
+            
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione dolorem suscipit placeat, quos ullam doloribus facere. Porro aspernatur ab ex, dolore consectetur incidunt explicabo, natus recusandae iure exercitationem quaerat.
+               
+           </div>
+       </div>
+
+        </div>
+   </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------Footer------------------------------------------>
+<footer>
+    <div class="foot-main">    
+    <div class="footer-cont">
+        <h1>Shoppistan</h1>
+        <p>Enjoye the biggest sale of your life.</p>
+        <span class="foot-emoji">
+        <i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-twitter"></i><i class="fa-brands fa-instagram"></i>
+    </span>
+    </div>
+    <div class="footer-cont">
+        <h1>About</h1>
+        
+        <a href="#"> About Us</a>
+        <a href="#"> Customer Support</a>
+        <a href="#"> Support Center</a>
+    
+    </div>
+    <div class="footer-cont">
+        <h1>Our Services</h1>
+        
+        <a href="shop.html"> Shop</a>
+        <a href="#"> Discounts</a>
+        <a href="#"> Shipping Modes</a>
+    
+    </div>
+    <div class="footer-cont">
+        <h1>Our Company</h1>
+        
+        <a href="#"> Register</a>
+        <a href="about.html"> About Us</a>
+        <a href="contact.html"> Contact Us</a>
+    </div>
+    </div>
+    <div class="last-line">
+        <p> Made With <i class="fa-regular fa-heart"></i> by Abdullah </p>
+        
+    
+    </div>
+    
+    
+    </footer>
+    <script src="javascript/ecommerce.js"></script> 
+    </body>
